@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Input Teks</title>
+<style>
+    body {
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        background-color: #f0f0f0;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 100vh;
+    }
+    .container {
+        text-align: center;
+        background-color: #fff;
+        border-radius: 10px;
+        box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+        padding: 40px;
+        max-width: 400px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+    input[type="text"] {
+        width: calc(100% - 22px);
+        padding: 10px;
+        margin-bottom: 20px;
+        border: 1px solid #ccc;
+        border-radius: 5px;
+        font-size: 16px;
+        box-sizing: border-box;
+    }
+    button {
+        padding: 10px 20px;
+        background-color: #006939;
+        color: #fff;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s ease;
+    }
+    button:hover {
+        background-color: #52A369;
+    }
+    #output {
+        margin-top: 20px;
+        font-size: 18px;
+        color: #006939;
+	font-family: 'Open Sans', sans-serif;
+    }
+</style>
+</head>
+<body>
+<div class="container">
+    <h1>Masukkan Teks</h1>
+    <input type="text" id="inputText" placeholder="Masukkan teks...">
+    <button id="showTextButton">Tampilkan</button>
+    <div id="output"></div>
+</div>
+<script>
+    document.getElementById('showTextButton').addEventListener('click', function() {
+        var inputText = document.getElementById("inputText").value;
+        var outputDiv = document.getElementById("output");
+        outputDiv.innerHTML = "<p>" + inputText + "</p>";
+    });
+</script>
+</body>
+</html>
